@@ -22,3 +22,6 @@ secrets.py
 
 #misc folder
 misc
+
+#Sublime sftp configs
+sftp-config.json
