@@ -61,8 +61,8 @@ class News_post(models.Model):
 
     title = models.CharField(max_length=100)
     text = models.TextField()
-    photos = models.ManyToManyField(Photo)
-    category = models.ForeignKey(News_category)
+    photos = models.ManyToManyField(Photo, null=True, blank=True)
+    category = models.ForeignKey(News_category, null=True, blank=True)
 
     class Meta:
         verbose_name = ('Событие')

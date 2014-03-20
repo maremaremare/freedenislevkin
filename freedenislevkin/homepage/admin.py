@@ -7,4 +7,4 @@ from .models import Homepage, Slider, SmallBoxPhoto
 
 admin.site.register(Homepage, SingletonModelAdmin)
 admin.site.register(Slider)
-admin.site.register (SmallBoxPhoto)
+admin.site.register(SmallBoxPhoto)
