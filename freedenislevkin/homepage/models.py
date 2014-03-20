@@ -28,6 +28,7 @@ class Slider(models.Model):
 
 class SmallBoxPhoto(models.Model):
 
+    title = models.CharField(null=True, max_length=50)
     photo = models.ImageField(upload_to='homepage/')
     photo_thumb = ImageSpecField(source='photo',
                                  processors=[ResizeToFill(285, 152)],
@@ -39,26 +40,26 @@ class SmallBoxPhoto(models.Model):
         verbose_name_plural = ('Фотографии для главной страницы')
 
     def __unicode__(self):
-        pass
+        return self.title
 
 
 class Homepage(SingletonModel):
 
-    textbox1 = models.CharField(max_length=300)
-    textbox2 = models.CharField(max_length=300)
-    textbox3 = models.CharField(max_length=300)
+    textbox1 = models.CharField(max_length=300, null=True)
+    textbox2 = models.CharField(max_length=300, null=True)
+    textbox3 = models.CharField(max_length=300, null=True)
 
-    photo1 = models.ForeignKey(SmallBoxPhoto, related_name='photo1')
-    photo2 = models.ForeignKey(SmallBoxPhoto, related_name='photo2')
-    photo3 = models.ForeignKey(SmallBoxPhoto, related_name='photo3')
+    photo1 = models.ForeignKey(SmallBoxPhoto, related_name='photo1', null=True)
+    photo2 = models.ForeignKey(SmallBoxPhoto, related_name='photo2', null=True)
+    photo3 = models.ForeignKey(SmallBoxPhoto, related_name='photo3', null=True)
 
-    show_big_textbox = models.BooleanField()
+    show_big_textbox = models.BooleanField(default=True)
     big_texbox_title = models.CharField(max_length=50, blank=True, null=True)
     big_textbox = models.TextField(blank=True, null=True)
 
-    slider = models.ManyToManyField(Slider)
+    slider = models.ManyToManyField(Slider, null=True)
 
-    show_news = models.BooleanField()
+    show_news = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = ('Главная страница')

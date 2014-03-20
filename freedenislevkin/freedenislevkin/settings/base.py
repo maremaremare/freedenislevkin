@@ -175,7 +175,7 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
 
-    'south', 'sitetree', 'multiupload', 'embed_video', 'pagination', 'imagekit'
+    'south', 'sitetree', 'solo', 'multiupload', 'embed_video', 'pagination', 'imagekit'
 )
 
 # Apps specific for this project go here.
