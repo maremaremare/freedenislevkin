@@ -1,0 +1,27 @@
+  {% extends "2colstitle.html" %}
+
+  {% block content %}
+
+  {% load pagination_tags %} {% autopaginate object_list 2 %}    
+  {% for item in object_list %}
+      <div class="blog-item m-bot-35">
+                
+                <div class="content-container-white press-text-container">
+                                            <div class="press-item-date-cont clearfix">
+                            <div class="left"><span class="press-item-date">
+                            {{ item.date.day }}</span></div>
+                            <div class="right">
+                                <div class="blog-item-mounth">{{ item.date|date:"b" }}</div>
+                                <div class="blog-item-year">{{ item.date.year }}</div>
+
+                            </div>
+                        </div><h4><b>{{ item.source }}</b> <br> <a href="{{  item.url  }}">{{  item.title  }} </a> </h4>
+                        
+                        
+                </div>  
+            </div>
+  {% endfor %}
+  
+ {% paginate %}
+
+   {% endblock content %}

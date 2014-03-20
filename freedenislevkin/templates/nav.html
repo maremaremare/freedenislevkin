@@ -1,0 +1,31 @@
+ <header id="header">
+            <div class="container clearfix">
+                <div class="sixteen columns ">
+                        <div id="logo-container">   
+                            <a href="/" class ="logotext" rel="home" title="Home">
+                                <span>free</span>denislevkin.ru
+                            </a>
+                        </div>
+                        <ul id="social-links" class="clearfix">
+                            <li><a id="facebook-link" target="_blank" title="Facebook" href="#"></a></li>
+                            <li><a id="skype-link" target="_blank" title="Skype" href="#"></a></li>
+                            <li><a id="twitter-link" target="_blank" title="Twitter" href="#"></a></li>
+                            <li><a id="flickr-link" target="_blank" title="Flickr" href="#"></a></li>
+                            <li><a id="vimeo-link" target="_blank" title="Vimeo" href="#"></a></li>
+                            <li><a id="rss-link" target="_blank" title="Dribbble" href="#"></a></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <div class="sixteen columns nav-border">
+                    
+                    <!-- TOP MENU -->
+                    <nav id="main-nav">
+                 {% load sitetree %}
+                 {% sitetree_menu from "menu" include "trunk,topmenu" template "menu.html" %}
+                    </nav>
+
+
+                </div>
+            </div>
+        </header>

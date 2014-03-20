@@ -1,0 +1,179 @@
+ <!DOCTYPE html>
+<!--
+
+    Theme Name: OPTIMAS
+    Description: HTML/CSS Template
+    Author: Abcgomel 
+    Version: 1.0
+    Designed & Coded by Abcgomel
+    
+-->
+<html>
+    <head>
+        <title>Cвободу Денису Левкину</title>
+        <meta charset=utf-8 >
+        
+        <meta name="keywords" content="" > 
+        <meta name="description" content="" > 
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="favicon.ico">
+
+<!-- CSS begin -->
+        
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css" >
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/skeleton.css" >
+
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.fancybox-1.3.4.css"  >
+        
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/styler.css">
+        
+    
+        <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/ie-warning.css" ><![endif]-->
+        <!--[if lte IE 9]><link rel="stylesheet" type="text/css" media="screen" href="css/style-ie.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/ei8fix.css" ><![endif]-->
+        
+        <!-- Sequence slider CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/sequencejs-theme.modern-slide-in.css" >
+        <!--[if lt IE 9]><link rel="stylesheet" type="text/css" media="screen" href="css/sequencejs-theme.modern-slide-in.ie.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/sequencejs-theme.modern-slide-in.ie8.css" ><![endif]-->
+        
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/colors/yellow.css" id="template-color">
+ 
+<!-- CSS end -->
+<!-- JS begin -->
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/superfish.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui.min.js"></script>
+        <!-- sequence js -->
+        <script type="text/javascript" src="{{ STATIC_URL }}js/sequence.jquery-min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/sequence-slider.js"></script>
+        <!-- end sequence js -->
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.jcarousel.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.fancybox-1.3.4.pack.js"></script>
+    <!--    // <script type="text/javascript" src="{{ STATIC_URL }}js/jQuery.BlackAndWhite.min.js"></script> -->
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.tweet.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jflickrfeed.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.quicksand.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
+        
+        <script type="text/javascript" src="{{ STATIC_URL }}js/styler.js"></script>
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+<!-- JS end -->
+    </head>
+    <body>
+
+    
+    <!--[if lte IE 7]>
+    <div id="ie-container">
+        <div id="ie-cont-close">
+            <a href='#' onclick='javascript&#058;this.parentNode.parentNode.style.display="none"; return false;'><img src='images/ie-warning-close.jpg' style='border: none;' alt='Close'></a>
+        </div>
+        <div id="ie-cont-content" >
+            <div id="ie-cont-warning">
+                <img src='images/ie-warning.jpg' alt='Warning!'>
+            </div>
+            <div id="ie-cont-text" >
+                <div id="ie-text-bold">
+                    You are using an outdated browser
+                </div>
+                <div id="ie-text">
+                    For a better experience using this site, please upgrade to a modern web browser.
+                </div>
+            </div>
+            <div id="ie-cont-brows" >
+                <a href='http://www.firefox.com' target='_blank'><img src='images/ie-warning-firefox.jpg' alt='Download Firefox'></a>
+                <a href='http://www.opera.com/download/' target='_blank'><img src='images/ie-warning-opera.jpg' alt='Download Opera'></a>
+                <a href='http://www.apple.com/safari/download/' target='_blank'><img src='images/ie-warning-safari.jpg' alt='Download Safari'></a>
+                <a href='http://www.google.com/chrome' target='_blank'><img src='images/ie-warning-chrome.jpg' alt='Download Google Chrome'></a>
+            </div>
+        </div>
+    </div>
+    <![endif]-->
+    
+<!-- HEADER -->
+
+ {% include "nav.html" %}
+
+       
+<!-- CONTENT -->
+   
+{% block main %}
+{% endblock %}
+
+<!-- FOOTER -->
+    <footer>
+        <div class="footer-content-bg">
+            <a class="scrollup" href="#">Go To Top</a>
+            <div class="container clearfix">
+                <div class="four columns m-bot-25">
+                    <div class="clearfix">
+                        <a href="index.html" class ="logotext footerlogotext" rel="home" title="Home">
+                                <span>free</span>denislevkin.ru
+                            </a>
+                    </div>
+                    <p>Pellentesque tristique volutpat nunc, id rhoncus augue tristique sed. Donec id elit non mi porta gravida at eget. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                    <a class="right r-m-plus" href="portfolio.html">
+                        <span class="bold">Read</span> More
+                    </a>
+                </div>
+                <div class="four columns m-bot-25">
+                    <h3 class="caption"><span class="bold">ПОСЛЕДНИЕ</span> НОВОСТИ</h3>
+                    <ul class="latest-post">
+                        <li>
+                            <h4 class="title-post-footer"><a href="blog-single.html">Donec id elit</a></h4>
+                            <h4 class="date-post-footer">July 10, 2012</h4>
+                            <p>Pellentesque tristique volutpat nunc, id rhoncus augue tristique sed. Donec id elit non mi porta gravida at eget...</p>
+                        </li>
+                        <li>
+                            <h4 class="title-post-footer"><a href="blog-single.html">Donec id elit</a></h4>
+                            <h4 class="date-post-footer">July 10, 2012</h4>
+                            <p>Donec id elit non mi porta gravida at eget. Pellentesque tristique... </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="four columns m-bot-25">
+                    <h3 class="caption"><span class="bold">ТВИТТЕР</h3>
+                    <div class="tweet"></div>
+                </div>
+                <div class="four columns m-bot-25">
+                    <h3 class="caption"><span class="bold">КОНТАКТЫ</span></h3>
+                    <p>Pellentesque tristique volutpat nunc, rhoncus augue tristique sed.</p>
+                    <div title="Location" class="icon_loc">Corporation, Inc. 123 Aolsom Ave, Suite 600 New York, CA 246012</div>
+                    <div title="Phone" class="icon_phone">(123) 456-7890<br>(123) 987-6540</div>
+                    <div title="Email" class="icon_mail"><a href="#">email@fincom.com</a></div> 
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-bg">
+            <div class="container clearfix">
+                <div class="twelve columns m-bot-25 m-top-25">
+                    <nav class="clearfix" id="footer-nav">
+                        <ul class="footer-menu">
+                            <li><a href="index.html">Начало</a></li>
+                            <li><a href="elements.html">О Денисе</a></li>
+                            <li><a href="portfolio.html">Доказательства невиновности</a></li>
+                            <li><a href="blog.html">События</a></li>
+                            <li><a href="contact.html">Пресса</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                            <li><a href="contact.html">Сбор подписей</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="four columns right-text m-bot-25 m-top-25">
+                     &copy; Optimas - Template by <a class="author" href="http://themeforest.net/user/abcgomel/portfolio">AbcGomel</a>
+                </div>
+            </div>
+        </div>
+    </footer>   
+    
+    
+    </body>
+</html>     

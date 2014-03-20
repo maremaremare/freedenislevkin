@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+ {% block main %}
+     
+ {% include "title.html" %}
+ 
+<div class="container clearfix">
+
+
+<div class="eleven columns m-bot-25">
+    {% block content %}        
+    {% endblock content %}    
+</div>
+
+<div class="five columns "> 
+{% block sidebar %}          
+{% endblock sidebar %}      
+</div>
+</div>
+
+ {% endblock main %}
+
