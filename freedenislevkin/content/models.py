@@ -63,6 +63,7 @@ class News_post(models.Model):
     text = models.TextField()
     photos = models.ManyToManyField(Photo, null=True, blank=True)
     category = models.ForeignKey(News_category, null=True, blank=True)
+    date = models.DateField(auto_now=True)
 
     class Meta:
         verbose_name = ('Событие')

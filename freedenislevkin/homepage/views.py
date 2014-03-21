@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView
 from .models import Homepage
 from content.models import News_post
+from split import chop
 # Create your views here.
 
 
@@ -12,6 +13,8 @@ class HomepageView(TemplateView):
 
         context = super(HomepageView, self).get_context_data(**kwargs)
 
-        context['news_list'] = News_post.objects.all()
+        splitted_list = list(chop(3, News_post.objects.all(), truncate=True))
+
+        context['big_list'] = splitted_list
 
         return context

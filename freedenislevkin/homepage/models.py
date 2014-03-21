@@ -54,8 +54,12 @@ class Homepage(SingletonModel):
     photo3 = models.ForeignKey(SmallBoxPhoto, related_name='photo3', null=True)
 
     show_big_textbox = models.BooleanField(default=True)
-    big_texbox_title = models.CharField(max_length=50, blank=True, null=True)
+    big_textbox_title = models.CharField(max_length=50, blank=True, null=True)
     big_textbox = models.TextField(blank=True, null=True)
+
+    show_petition = models.BooleanField(default=True)
+    petition_title = models.CharField(max_length=300, null=True)
+    petition_subtitle = models.CharField(max_length=300, null=True)
 
     slider = models.ManyToManyField(Slider, null=True)
 
